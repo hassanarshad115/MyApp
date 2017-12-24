@@ -125,24 +125,7 @@ namespace MyApp
 
         private void Deletebutton2_Click(object sender, EventArgs e)
         {
-            ModelClass obj = new ModelClass()
-            {
-                namep = nametextBox4.Text,
-                purchasep = purchasetextBox1.Text,
-                salep = saletextBox2.Text,
-                availablep = availableQtytextBox3.Text,
-                datap = dateTimePicker1.Value.ToString()
-            };
-            BusinessClass.businessMethod(obj, "del");
-            MessageBox.Show("Delete Data Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            dataGridView1.DataSource = ShowData();
-            ClearRfocusKlyeMethod();
-        }
-
-        private void Updatebutton4_Click(object sender, EventArgs e)
-        {
-            DialogResult r = MessageBox.Show("Are You Sure..You want to Update Data?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (r == DialogResult.Yes)
+            if (isvalid())
             {
                 ModelClass obj = new ModelClass()
                 {
@@ -152,11 +135,33 @@ namespace MyApp
                     availablep = availableQtytextBox3.Text,
                     datap = dateTimePicker1.Value.ToString()
                 };
-
-                BusinessClass.businessMethod(obj, "up");
-                MessageBox.Show("Update Data Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BusinessClass.businessMethod(obj, "del");
+                MessageBox.Show("Delete Data Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dataGridView1.DataSource = ShowData();
                 ClearRfocusKlyeMethod();
+            }
+        }
+        private void Updatebutton4_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Are You Sure..You want to Update Data?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (r == DialogResult.Yes)
+            {
+                if (isvalid())
+                {
+                    ModelClass obj = new ModelClass()
+                    {
+                        namep = nametextBox4.Text,
+                        purchasep = purchasetextBox1.Text,
+                        salep = saletextBox2.Text,
+                        availablep = availableQtytextBox3.Text,
+                        datap = dateTimePicker1.Value.ToString()
+                    };
+
+                    BusinessClass.businessMethod(obj, "up");
+                    MessageBox.Show("Update Data Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView1.DataSource = ShowData();
+                    ClearRfocusKlyeMethod();
+                }
             }
         }
 
