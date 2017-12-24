@@ -168,7 +168,7 @@
             // 
             // Updatebutton4
             // 
-            this.Updatebutton4.Location = new System.Drawing.Point(335, 402);
+            this.Updatebutton4.Location = new System.Drawing.Point(336, 402);
             this.Updatebutton4.Name = "Updatebutton4";
             this.Updatebutton4.Size = new System.Drawing.Size(196, 31);
             this.Updatebutton4.TabIndex = 6;
@@ -178,7 +178,7 @@
             // 
             // Savebutton5
             // 
-            this.Savebutton5.Location = new System.Drawing.Point(336, 402);
+            this.Savebutton5.Location = new System.Drawing.Point(337, 402);
             this.Savebutton5.Name = "Savebutton5";
             this.Savebutton5.Size = new System.Drawing.Size(196, 31);
             this.Savebutton5.TabIndex = 5;
