@@ -80,6 +80,7 @@
             this.purchasetextBox1.Name = "purchasetextBox1";
             this.purchasetextBox1.Size = new System.Drawing.Size(135, 20);
             this.purchasetextBox1.TabIndex = 1;
+            this.purchasetextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.purchasetextBox1_KeyPress);
             // 
             // label2
             // 
@@ -96,6 +97,7 @@
             this.saletextBox2.Name = "saletextBox2";
             this.saletextBox2.Size = new System.Drawing.Size(135, 20);
             this.saletextBox2.TabIndex = 2;
+            this.saletextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.saletextBox2_KeyPress);
             // 
             // label3
             // 
@@ -112,6 +114,7 @@
             this.availableQtytextBox3.Name = "availableQtytextBox3";
             this.availableQtytextBox3.Size = new System.Drawing.Size(172, 20);
             this.availableQtytextBox3.TabIndex = 3;
+            this.availableQtytextBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.availableQtytextBox3_KeyPress);
             // 
             // dateTimePicker1
             // 

@@ -185,6 +185,31 @@ namespace MyApp
             Updatebutton4.Visible = true;
             Savebutton5.Visible = false;
         }
+
+        private void availableQtytextBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            EnterOnlyNumberMethod(e);
+        }
+
+        private static void EnterOnlyNumberMethod(KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (char.IsLetter(ch))
+            {
+                MessageBox.Show("Enter only Number", "ERROR !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+            }
+        }
+
+        private void purchasetextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            EnterOnlyNumberMethod(e);
+        }
+
+        private void saletextBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            EnterOnlyNumberMethod(e);
+        }
     }
 }
 
